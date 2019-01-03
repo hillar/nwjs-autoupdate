@@ -18,7 +18,7 @@ npm run build
 npm run dev
 
 # build application for production
-# packages go to {{ releasedir}}
+# packages go to {{ releasesdir}}
 # zipped packages & autoupdater manifest to {{ appsdir }}
 
 npm run build

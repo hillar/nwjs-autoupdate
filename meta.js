@@ -19,6 +19,24 @@ module.exports = {
       message: 'Application description',
       default: 'A nwjs autoupdate buefy application'
     },
+    devport: {
+      type: 'string',
+      required: false,
+      message: 'dev port',
+      default: '8001'
+    },
+    releasesdir: {
+      type: 'string',
+      required: false,
+      message: 'releases directory',
+      default: 'releases'
+    },
+    appsdir: {
+      type: 'string',
+      required: false,
+      message: 'zipped applications directory',
+      default: 'applications'
+    },
     plugins: {
       type: 'checkbox',
       message: 'Select which Vue plugins to install',

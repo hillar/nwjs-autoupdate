@@ -15,6 +15,7 @@ import axios from 'axios'
 
     try {
 
+      const updater = new AutoUpdater( require( "../../package.json" ) )
       if ( updater.isSwapRequest() ) {
         output.innerHTML += `\nSwapping...`
         await updater.swap()
