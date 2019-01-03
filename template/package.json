@@ -1,6 +1,6 @@
 {
   "name": "{{ name }}",
-  "manifestUrl": "http://localhost:{{ devport }}/{{ appsdir }}/{{ name }}",
+  "manifestUrl": "http://localhost:{{ devport }}/{{ appsdir }}/{{ name }}/{{name}}-manifest.json",
   "label": "{{ label }}",
   "description": "{{ description }}",
   "version": "0.0.1",
@@ -17,10 +17,10 @@
       "node_modules/**/*",
       "dist/**/*"
     ],
-    "output": "./releases",
+    "output": "{{ releasesdir }}",
     "nwVersion": "0.35.3",
     "nwPlatforms": [
-      "win","mac"
+      "mac"
     ],
     "nwArchs": [
       "x64"
@@ -30,12 +30,15 @@
     "dev": "node build/dev-runner.js",
     "build": "node build/runner.js"
   },
-  "devDependencies": {
+  "dependencies": {
     {{#isEnabled plugins 'axios'}}
     "axios": "^0.18.0",
     {{/isEnabled}}
+    "archiver": "^3.0.0",
     "buefy": "^0.7.1",
-    "nw-autoupdater": "^1.1.8",
+    "nw-autoupdater": "^1.1.8"
+  },
+  "devDependencies": {
     "ajv": "^6.5.3",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
