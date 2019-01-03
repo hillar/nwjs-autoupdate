@@ -11,7 +11,7 @@ const webpackBgConfig = require('./webpack.bg.config')
 const runPath = npmWhich.sync('run')
 
 // TODO move to 'cetral' config
-const __DEVPORT__ = 8001
+const __DEVPORT__ = {{ devport }}
 
 let nwProcess = null
 let nwRestarting = false

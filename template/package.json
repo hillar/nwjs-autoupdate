@@ -1,6 +1,6 @@
 {
   "name": "{{ name }}",
-  "manifestUrl": "http://localhost:{{ devport }}/{{ appsdir }}/{{ name }}"
+  "manifestUrl": "http://localhost:{{ devport }}/{{ appsdir }}/{{ name }}",
   "label": "{{ label }}",
   "description": "{{ description }}",
   "version": "0.0.1",

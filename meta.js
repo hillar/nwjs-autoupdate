@@ -20,10 +20,10 @@ module.exports = {
       default: 'A nwjs autoupdate buefy application'
     },
     devport: {
-      type: 'string',
+      type: 'number',
       required: false,
       message: 'dev port',
-      default: '8001'
+      default: 8001
     },
     releasesdir: {
       type: 'string',
