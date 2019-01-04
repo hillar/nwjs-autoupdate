@@ -51,7 +51,12 @@ import axios from 'axios'
         })
         const updateFile = await updater.download( remoteManifest )
         await updater.unpack( updateFile )
-        alert( `The application will automatically restart to finish installing the update` )
+        //alert( `The application will automatically restart to finish installing the update` )
+        output.innerHTML = `The application will automatically restart to finish installing the update...\n`
+        if (process.platform === 'darwin') {
+          alert('sorry, on mac os x security settings do not allow automatic update,\ndownloaded version will be opened on separate finder window')
+          nw.Shell.showItemInFolder(updateFile)
+        }
         await updater.restartToSwap()
       } else {
         output.innerHTML = `<font color=red>Can not run, need upgrade </font>\n`

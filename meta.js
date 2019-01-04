@@ -85,7 +85,8 @@ module.exports = {
     console.log()
     console.log('   Next steps:')
     if (!data.inPlace) console.log(`      \x1b[33m$\x1b[0m cd ${data.destDirName}`)
-    console.log('      \x1b[33m$\x1b[0m npm install')
+    console.log('      \x1b[33m$\x1b[0m npm install && npm run build')
+    console.log('      \x1b[33m$\x1b[0m atom ./')
     console.log('      \x1b[33m$\x1b[0m npm run dev')
     console.log('      \x1b[33m$\x1b[0m npm run build')
   }

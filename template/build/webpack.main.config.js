@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const utils = require('./utils')
-const { label, dependencies } = require('../package')
+const { label, dependencies, version } = require('../package')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -92,7 +92,7 @@ let config = {
     new VueLoaderPlugin(),
     new ExtractTextWebpackPlugin('style.css'),
     new HtmlWebpackPlugin({
-      title: label,
+      title: label+' '+version,
       filename: 'index.html',
       template: path.join(__dirname, '../src/main/index.ejs'),
       minify: {

@@ -5,11 +5,12 @@
 </template>
 
 <script>
+const os = require('os')
 export default {
   name: 'landing-page',
   data () {
     return {
-      msg: 'Hello World!'
+      msg: 'Hello '+ os.userInfo().username
     }
   }
 }
