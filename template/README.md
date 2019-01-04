@@ -22,4 +22,11 @@ npm run dev
 # zipped packages & autoupdater manifest to {{ appsdir }}
 
 npm run build
+
+
+# run tiny temporary http server
+# so built app can get manifest and zip's
+
+python -m SimpleHTTPServer {{ devport }}
+
 ```
