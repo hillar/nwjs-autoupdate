@@ -20,6 +20,7 @@
     ],
     "output": "{{ releasesdir }}",
     "nwVersion": "{{ nwversion }}",
+    "nwFlavor":"sdk",
     "nwPlatforms": [
       "{{ nwplatform }}"
     ],

@@ -119,12 +119,12 @@ if (isProduction) {
       comments: false
     }),
     new webpack.DefinePlugin({
-      '__static': '"dist/static"'
+      '__static': '"{{ distdir }}/static"'
     }),
     new CopyWebpackPlugin([
       {
         from: path.join(__dirname, '../static'),
-        to: path.join(__dirname, '../dist/static'),
+        to: path.join(__dirname, '../{{ distdir}}/static'),
         ignore: ['.*']
       }
     ]),
