@@ -70,7 +70,7 @@ function cleanApps () {
 }
 
 function cleanDist () {
-  return fs.emptydir(path.resolve(__dirname, '../', 'dist'))
+  return fs.emptydir(path.resolve(__dirname, '../', '{{ distdir }}'))
 }
 
 function cleanBuild () {

@@ -44,6 +44,12 @@ module.exports = {
       message: 'dev port',
       default: 8001
     },
+    distdir: {
+      type: 'string',
+      required: false,
+      message: 'dist directory',
+      default: 'distribute'
+    },
     releasesdir: {
       type: 'string',
       required: false,

@@ -7,7 +7,7 @@
   "version": "0.0.1",
   "author": "{{ author }}",
   "private": true,
-  "main": "./dist/bg/bg.js",
+  "main": "./{{ distdir }}/bg/bg.js",
   "node-remote": "*://localhost/*",
   "window": {
     "width": 1024,
@@ -16,7 +16,7 @@
   "build": {
     "files": [
       "node_modules/**/*",
-      "dist/**/*"
+      "{{ distdir }}/**/*"
     ],
     "output": "{{ releasesdir }}",
     "nwVersion": "{{ nwversion }}",

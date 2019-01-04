@@ -16,7 +16,7 @@ let config = {
     bg: path.join(__dirname, '../src/bg/bg')
   },
   output: {
-    path: path.join(__dirname, '../dist/bg'),
+    path: path.join(__dirname, '../{{ distdir }}/bg'),
     filename: '[name].js'
   },
   externals: [
@@ -64,7 +64,7 @@ if (isProduction) {
       comments: false
     }),
     new webpack.DefinePlugin({
-      '__static': '"dist/static"'
+      '__static': '"{{ distdir }}/static"'
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'

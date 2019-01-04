@@ -20,7 +20,7 @@ let config = {
     main: path.join(__dirname, '../src/main/main')
   },
   output: {
-    path: path.join(__dirname, '../dist/main'),
+    path: path.join(__dirname, '../{{ distdir }}/main'),
     filename: '[name].js'
   },
   externals: [
