@@ -37,6 +37,8 @@
     "axios": "^0.18.0",
     {{/isEnabled}}
     "archiver": "^3.0.0",
+    "vue": "^2.5.17",
+    "bulma": "^0.7.2",
     "buefy": "^0.7.1",
     "nw-autoupdater": "^1.1.8"
   },
