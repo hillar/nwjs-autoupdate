@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+//import Buefy from 'buefy'
+//import 'buefy/dist/buefy.css'
 import AutoUpdater from 'nw-autoupdater'
 {{#isEnabled plugins 'axios'}}
 import axios from 'axios'
@@ -29,7 +29,7 @@ import axios from 'axios'
 
       if ( !needsUpdate ) {
         output.innerHTML += `\nApp is up to date...`
-        Vue.use(Buefy)
+        //Vue.use(Buefy)
         Vue.config.productionTip = false
         {{#isEnabled plugins 'axios'}}
         Vue.http = Vue.prototype.$http = axios
