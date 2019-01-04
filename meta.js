@@ -1,3 +1,10 @@
+// https://github.com/evshiron/nwjs-builder-phoenix/blob/e9c26b61669589e599da95ee82ac3bb489c6dd04/src/lib/Builder.ts#L74
+// nwjs-builder-phoenix uses its own platform names ;(
+const nwjsBuilderPhoenixPlatformNames = {}
+nwjsBuilderPhoenixPlatformNames.darwin = 'mac'
+nwjsBuilderPhoenixPlatformNames.win32 = 'win'
+nwjsBuilderPhoenixPlatformNames.linux = 'linux'
+
 module.exports = {
   prompts: {
     name: {
@@ -29,7 +36,7 @@ module.exports = {
       type: 'string',
       required: false,
       message: 'nwjs platform',
-      default () { return process.platform }
+      default () { return nwjsBuilderPhoenixPlatformNames[process.platform] }
     },
     devport: {
       type: 'number',
