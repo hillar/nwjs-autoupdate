@@ -1,6 +1,7 @@
 {
   "name": "{{ name }}",
   "manifestUrl": "http://localhost:{{ devport }}/{{ appsdir }}/{{ name }}/{{name}}-manifest.json",
+  "crash_report_url": "http://localhost:{{ devport }}/{{ appsdir }}/{{ name }}",
   "label": "{{ label }}",
   "description": "{{ description }}",
   "version": "0.0.1",
@@ -18,9 +19,9 @@
       "dist/**/*"
     ],
     "output": "{{ releasesdir }}",
-    "nwVersion": "0.35.3",
+    "nwVersion": "{{ nwversion }}",
     "nwPlatforms": [
-      "mac"
+      "{{ nwplatform }}"
     ],
     "nwArchs": [
       "x64"

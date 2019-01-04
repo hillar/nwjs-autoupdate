@@ -16,9 +16,13 @@ const manifest = require('../package')
 
 const buildPath = npmWhich.sync('build')
 
+// TODO move to 'central' config
+const __DEVPORT__ = {{ devport }}
+
+
 // "manifestUrl": "http://localhost:{{ devport }}/{{ appsdir }}/{{ name }}/{{name}}-manifest.json",
 const RELEASES = '{{ releasesdir }}'
-const HOST = 'http://localhost:{{ devport }}/'
+const HOST = `http://localhost:${__DEVPORT__}/`
 const PREFIX = '{{ appsdir }}'
 const PLATFORMS = [
   [ `linux-x64`, `linux64` ],

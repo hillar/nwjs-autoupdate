@@ -19,6 +19,18 @@ module.exports = {
       message: 'Application description',
       default: 'A nwjs autoupdate buefy application'
     },
+    nwversion: {
+      type: 'string',
+      required: false,
+      message: 'nwjs version',
+      default: '0.35.3'
+    },
+    nwplatform: {
+      type: 'string',
+      required: false,
+      message: 'nwjs platform',
+      default () { return process.platform }
+    },
     devport: {
       type: 'number',
       required: false,
