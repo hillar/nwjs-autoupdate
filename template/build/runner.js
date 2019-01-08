@@ -88,7 +88,11 @@ function pack (config) {
 }
 
 function packMain () {
-  return pack(webpackMainConfig)
+  return new Promise(async (resolve, reject) => {
+    try { await pack(webpackMainConfig) }
+    catch (e) { reject(e) }
+    resolve()
+  })
 }
 
 function packBg () {

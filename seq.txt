@@ -1,0 +1,33 @@
+title Autoupdate Sequence
+
+start->app: START
+app->app: swap check
+
+alt running from tmp
+  note right of app: pack old, move new
+  app->start: restart
+end
+
+app->manifestServer: Manifest Request
+note right of app: user must use smartcard
+manifestServer->manifestServer: client cert check
+note right of manifestServer: local copy of CA chains
+
+alt cert ok
+  manifestServer->app: Manifest
+  app->app: version check
+    alt new version
+        app->manifestServer: get tarball
+        manifestServer->app: tarball
+        app->app:
+        note right of app:  unpack new &\n start swap
+        app->start:start from tmp
+    else same old
+        app->app: start VUE
+        note over app: real app running
+    end
+  else no cert
+  manifestServer->app: Error
+  app->app: show error
+  note right of app: ask for retry !?
+end
