@@ -1,11 +1,11 @@
-# nwjs-au-buefy
+# nwjs-au
 
-vue cli template with autoupdate and buefy
+vue cli template with autoupdate
 
 
 ```bash
 
-vue init hillar/nwjs-au-buefy <project_name>
+vue init hillar/nwjs-autoupdate <project_name>
 
 ```
 
@@ -16,8 +16,3 @@ see https://cli.vuejs.org/guide/creating-a-project.html#pulling-2-x-templates-le
 ## autoupdater
 
 see https://github.com/dsheiko/nw-autoupdater
-
-
-## buefy
-
-see https://github.com/buefy/buefy/

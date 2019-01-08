@@ -24,7 +24,7 @@ module.exports = {
       type: 'string',
       required: false,
       message: 'Application description',
-      default: 'A nwjs autoupdate buefy application'
+      default: 'A nwjs autoupdate application'
     },
     nwversion: {
       type: 'string',
@@ -81,7 +81,7 @@ module.exports = {
   },
   complete (data) {
     console.log()
-    console.log('   Welcome to your new nwjs-au-buefy project!')
+    console.log('   Welcome to your new nwjs-au project!')
     console.log()
     console.log('   Next steps:')
     if (!data.inPlace) console.log(`      \x1b[33m$\x1b[0m cd ${data.destDirName}`)
